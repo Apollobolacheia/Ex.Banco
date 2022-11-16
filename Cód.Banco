@@ -1,0 +1,33 @@
+var opcao, vl_saq;
+var saldo = 0;
+var min = 0;
+var max = 1000000;
+var deposito = 0;
+
+
+do {
+opcao = parseInt(prompt("Escolha uma opção:\n1 - Saque\n2 - Depósito\n3 - Saldo\n0 - Sair")); // MENU inicial
+switch (opcao) {
+case 1:
+    vl_saq = parseInt(prompt("Qual o valor do saque:"));
+    if (vl_saq>saldo) {
+        alert("O seu saldo não é suficiente para esse saque.")
+    } else {
+        saldo = saldo - vl_saq;
+        alert("Saque sendo Processado");
+        alert("....... Retire da bandeja");
+        alert("Agradecemos por utilizar os nossos serviços.");
+    }
+    break;
+case 2:
+    deposito = parseInt(prompt("Quanto você quer depositar?"))/*Opção pra saber o valor pra depositar*/
+        alert("O valor de : R$ "+deposito+" foi depositado com sucesso,")
+        saldo = saldo + deposito;
+case 3:
+
+    alert("O seu saldo em conta é de : R$ "+saldo+" Deseja fazer mais alguma coisa? Espero o outro menu.")        
+
+}
+} while (opcao != 0);
+
+      
